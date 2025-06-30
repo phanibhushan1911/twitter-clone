@@ -1,0 +1,214 @@
+/* Base Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+    color: #0F8CDF;
+    margin: 10px 0;
+    font-size: 25px;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Icons */
+i {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.fa-solid {
+    color: #999;
+}
+
+.liked {
+    color: red;
+}
+
+.retweeted {
+    color: limegreen;
+}
+
+/* Layout Container */
+main,
+header {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+/* Header */
+header {
+    padding-bottom: 25px;
+}
+
+/* Tweet Input Area */
+.tweet-input-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 0;
+}
+
+/* Profile Picture */
+.profile-pic {
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+/* Text Areas & Buttons */
+textarea,
+.reply-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 22px;
+    width: 100%;
+    max-width: 100%;
+}
+
+button,
+.reply-btn {
+    background-color: #1DA1F2;
+    border: none;
+    color: white;
+    padding: 10px 19px;
+    border-radius: 20px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: background 0.2s ease-in-out;
+}
+
+button:hover,
+.reply-btn:hover {
+    background-color: #0d8ae0;
+}
+
+/* Delete Button */
+.delete-btn {
+    margin-top: 8px;
+    padding: 4px 10px;
+    background-color: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Tweet Feed Layout */
+.feed {
+    margin-bottom: 100px;
+}
+
+.tweet {
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.tweet-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.tweet-text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    word-break: break-word;
+}
+
+.tweet-details {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.tweet-detail {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Replies */
+.tweet-reply {
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0;
+    margin: 10px 0 10px 40px;
+    width: 80%;
+}
+
+.handle {
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0;
+}
+
+.reply-box {
+    margin-top: 10px;
+    padding: 8px;
+    border-top: 1px solid #ccc;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Responsive Fixes */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        width: 36px;
+        height: 36px;
+    }
+
+    .tweet-input-area {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .tweet-details {
+        justify-content: flex-start;
+    }
+
+    .tweet-reply {
+        margin-left: 20px;
+        width: 90%;
+    }
+}
